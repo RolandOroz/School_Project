@@ -1,0 +1,16 @@
+{
+    "schema": "test",
+    "includesDdl": true,
+    "includesViewsDdl": true,
+    "includesData": true,
+    "tables": [
+        "books"
+    ],
+    "views": [],
+    "events": [],
+    "functions": [],
+    "procedures": [],
+    "basenames": {
+        "books": "test@books"
+    }
+}

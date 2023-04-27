@@ -1,0 +1,26 @@
+{
+    "dumper": "mysqlsh Ver 8.0.32-g3 for Win64 on x86_64 - for MySQL 8.0.32 (MySQL Community Server (GPL))",
+    "version": "2.0.1",
+    "origin": "dumpSchemas",
+    "schemas": [
+        "test"
+    ],
+    "basenames": {
+        "test": "test"
+    },
+    "defaultCharacterSet": "utf8mb4",
+    "tzUtc": true,
+    "bytesPerChunk": 64000000,
+    "user": "root",
+    "hostname": "Sephiroth2Leno",
+    "server": "Sephiroth2Leno",
+    "serverVersion": "8.0.31",
+    "binlogFile": "SEPHIROTH2LENO-bin.000019",
+    "binlogPosition": 3535,
+    "gtidExecuted": "",
+    "gtidExecutedInconsistent": false,
+    "consistent": true,
+    "compatibilityOptions": [],
+    "capabilities": [],
+    "begin": "2023-04-27 13:13:17"
+}

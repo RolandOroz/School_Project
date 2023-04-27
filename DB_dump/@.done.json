@@ -1,0 +1,12 @@
+{
+    "end": "2023-04-27 13:13:19",
+    "dataBytes": 479,
+    "tableDataBytes": {
+        "test": {
+            "books": 479
+        }
+    },
+    "chunkFileBytes": {
+        "test@books@@0.tsv.zst": 479
+    }
+}
