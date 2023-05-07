@@ -3,7 +3,7 @@ import mysql from "mysql2";
 import cors from "cors";
 
 const app = express();
-const connection = mysql.createConnection ({
+const dbConnection = mysql.createConnection ({
     host: "localhost",
     port: 3327,
     user: "sqltool",
@@ -19,7 +19,7 @@ app.get("/", (req, res) =>{
 
 app.get("/books", (req, res) =>{
     const query = "SELECT * FROM books;"
-    connection.query(query, (err, data) =>{
+    dbConnection.query(query, (err, data) =>{
         if(err) return res.json(err);
         return res.json(data);
     });
@@ -33,11 +33,41 @@ app.post("/books", (req,res) =>{
         req.body.price,
         req.body.cover
     ];
-    connection.query(query, [values],(err, data) =>{
+    dbConnection.query(query, [values],(err, data) =>{
         if(err) return res.json(err);
         return res.json("Book created...");
     });
 });
+
+app.delete("/books/:id", (req, res) =>{
+    const bookId = req.params.id;
+    const query = "DELETE FROM books WHERE id = ?";
+
+    dbConnection.query(query, [bookId], (err, data) =>{
+        if(err) return res.json(err);
+        return res.json("Book '${bookId}' deleted");
+    
+    })
+})
+
+app.put("/books/:id", (req, res) =>{
+    const bookId = req.params.id;
+    const query = "UPDATE books SET `title` = ?, `book_desc` = ?, `price` = ?, `cover` = ? WHERE id = ?";
+
+    const values = [
+        req.body.title,
+        req.body.book_desc,
+        req.body.price,
+        req.body.cover
+    ];               
+
+    dbConnection.query(query, [...values, bookId], (err, data) =>{
+        if(err) return res.json(err);
+        return res.json("Book `${bookId}` updated.");
+    
+    })
+})
+
 
 app.listen(8800, () =>{
     console.log("Connected to backend!!");

@@ -3,4 +3,102 @@
     padding: 0px 100px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.books{
+    display: flex;
+    gap: 10px;
+}
+
+.book{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    background-color: rgb(203, 238, 227);
+}
+
+.delete, .update{
+    border: none;
+    padding: 3px 6px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px rgb(203, 238, 227);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.delete:hover, .update:hover{
+    background-color: rgb(203, 208, 207);
+    transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -ms-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -o-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.delete:active, .update:active{
+    background-color: rgb(203, 238, 227);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input{
+    width: 250px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.formButton{
+    border: none;
+    padding: 3px 6px;
+    background-color: whitesmoke;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px rgb(203, 238, 227);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.formButton:hover{
+    background-color: rgb(203, 208, 207);
+    transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -webkit-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -moz-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -ms-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    -o-transition:cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.formButton:active{
+    background-color: rgb(203, 238, 227);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -moz-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -ms-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    -o-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
